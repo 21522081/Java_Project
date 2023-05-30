@@ -56,7 +56,7 @@ public class template extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 51));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -172,7 +172,7 @@ public class template extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon("D:\\downloads\\anime.jpg")); // NOI18N
         jLabel1.setText("Hotel Management");
         jPanel3.add(jLabel1);
-        jLabel1.setBounds(-140, 0, 610, 400);
+        jLabel1.setBounds(-140, 0, 610, 510);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

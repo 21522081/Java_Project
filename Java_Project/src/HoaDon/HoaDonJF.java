@@ -17,14 +17,16 @@ public class HoaDonJF extends javax.swing.JFrame {
     /**
      * Creates new form HoaDonJF
      */
-    HoaDonController hd;
+    HoaDonModel hd;
+    HoaDonController con;
     private template tp; // Tham chiếu template
     public HoaDonJF() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE); // Đặt phương thức đóng form của template
         Billheader();
-        hd =new HoaDonController();
+        
         tp = new template();
+        con = new HoaDonController();
     }
     private void closeHoaDonJF() {
     setVisible(false); // Ẩn KhachHangJF
@@ -332,7 +334,9 @@ public class HoaDonJF extends javax.swing.JFrame {
 
     private void txtSoPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSoPhongActionPerformed
         // TODO add your handling code here:
-        hd.xuatThongTin(this.txtSoPhong.getText());
+
+        hd = con.xuatThongTin(this.txtSoPhong.getText());
+       // System.out.println(hd.getMaKH());
         this.labelMaKH.setText(hd.getMaKH()); 
         this.labelCheckin.setText(hd.getNgayDen());
         this.labelCheckout.setText(hd.getNgayDi());
