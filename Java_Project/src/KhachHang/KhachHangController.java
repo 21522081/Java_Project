@@ -26,16 +26,16 @@ public class KhachHangController {
 
     public Connection getConnection() throws SQLException{
         // Thông tin kết nối đến cơ sở dữ liệu
-        String url = "jdbc:mysql://localhost:3306/qlks"; // Thay "your_database" bằng tên cơ sở dữ liệu của bạn
+        String url = "jdbc:mysql://localhost:3306/QLKS_1"; // Thay "your_database" bằng tên cơ sở dữ liệu của bạn
         String username = "root";
-        String password = "123456";
+        String password = "ntduc";
 
        return DriverManager.getConnection(url, username, password);
     }
   public void themThongTin(String MaKH, String TenKH, String GTinh, String CMND, String DCHi, String Qtich, String SoDT, String Email) {
       KhachHangJFrame a = new KhachHangJFrame();
       if (MaKH.isEmpty() || TenKH.isEmpty() || GTinh.isEmpty() || CMND.isEmpty() || DCHi.isEmpty() || Qtich.isEmpty() || SoDT.isEmpty() || Email.isEmpty()) {
-        JOptionPane.showMessageDialog(a, "Vui lòng nhập đầy đủ thông tin", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(a, "Vui lòng nhập đầy đủ thông tin Hoặc Kiểm Tra Lại Mã Khách Hàng Đã Tồn Tại Trong Hệ Thống", "Lỗi", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
@@ -56,13 +56,13 @@ public class KhachHangController {
 
         if (rowsInserted > 0) {
             System.out.println("Dữ liệu đã được chèn thành công!");
-            JOptionPane.showMessageDialog(a , "Thành Côg");
+            JOptionPane.showMessageDialog(a , "Đã Thêm Khách Hàng Thành Công Vào Hệ Thống !");
         
          
         }
     } catch (SQLException ex) {
         ex.printStackTrace();
-        JOptionPane.showMessageDialog(a, "Vui lòng nhập đầy đủ thông tin", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(a, "Vui lòng nhập đầy đủ thông tin Hoặc Kiểm Tra Lại Mã Khách Hàng Trong Hệ Thống", "Lỗi", JOptionPane.ERROR_MESSAGE);
     }
 }
   public DefaultTableModel  xuatThongTin(int Ma){

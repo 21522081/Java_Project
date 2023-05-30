@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package KhachHang;
-import KhachHang.KhachHang;
+package NhanVien;
+
+import NhanVien.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -18,13 +19,13 @@ public class DeleteTable extends javax.swing.JFrame {
     /**
      * Creates new form UpdateTable
      */
-    KhachHang b;
-    KhachHangController kh;
+    NhanVien b;
+    NhanVienController nv;
     public DeleteTable() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        b = new KhachHang();
-        kh = new KhachHangController();
+        b = new NhanVien();
+        nv = new NhanVienController();
     }
 
     /**
@@ -50,12 +51,12 @@ public class DeleteTable extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Hopstarter-Sleek-Xp-Basic-Administrator.16.png"))); // NOI18N
-        jLabel1.setText("Hãy Nhập Mã Khách Hàng\n Mà Bạn Muốn Xóa !");
+        jLabel1.setText("Hãy Nhập Mã Nhân Viên  Mà Bạn Muốn Xóa !");
 
         jButton1.setBackground(new java.awt.Color(246, 242, 242));
         jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Fasticon-Database-Data-delete.32.png"))); // NOI18N
-        jButton1.setText("Xóa Khách Hàng");
+        jButton1.setText("Xóa Nhân Viên");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -74,7 +75,7 @@ public class DeleteTable extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 37, Short.MAX_VALUE)
+                .addGap(0, 47, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(19, 19, 19))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -123,16 +124,16 @@ public class DeleteTable extends javax.swing.JFrame {
     // Kiểm tra phản hồi của người dùng
     if (option == JOptionPane.YES_OPTION) {
         // Người dùng chọn YES, thực hiện hành động tương ứng
-        String updateQuery = "DELETE FROM Khach_Hang WHERE MaKh = ?";
+        String updateQuery = "DELETE FROM Nhan_Vien WHERE MaVN = ?";
         try {
-            Connection conn = kh.getConnection();
+            Connection conn = nv.getConnection();
             PreparedStatement preparedStatement = conn.prepareStatement(updateQuery);
             preparedStatement.setInt(1, Integer.parseInt(txtma.getText()));
 
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Dữ liệu đã được xóa thành công!");
-                JOptionPane.showMessageDialog(this, "Dữ Liệu Khách Hàng đã được Xóa thành công!");
+                JOptionPane.showMessageDialog(this, "Dữ Liệu Nhân Viên đã được Xóa thành công!");
             } else {
                 System.out.println("Không có dữ liệu nào được Xóa!");
             }
@@ -176,6 +177,10 @@ public class DeleteTable extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(DeleteTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

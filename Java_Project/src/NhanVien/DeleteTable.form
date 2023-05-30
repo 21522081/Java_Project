@@ -47,7 +47,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
@@ -95,7 +95,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icon/Hopstarter-Sleek-Xp-Basic-Administrator.16.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="H&#xe3;y Nh&#x1ead;p M&#xe3; Kh&#xe1;ch H&#xe0;ng&#xa; M&#xe0; B&#x1ea1;n Mu&#x1ed1;n X&#xf3;a !"/>
+            <Property name="text" type="java.lang.String" value="H&#xe3;y Nh&#x1ead;p M&#xe3; Nh&#xe2;n Vi&#xea;n  M&#xe0; B&#x1ea1;n Mu&#x1ed1;n X&#xf3;a !"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
@@ -109,7 +109,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icon/Fasticon-Database-Data-delete.32.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="X&#xf3;a Kh&#xe1;ch H&#xe0;ng"/>
+            <Property name="text" type="java.lang.String" value="X&#xf3;a Nh&#xe2;n Vi&#xea;n"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
