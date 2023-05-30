@@ -12,16 +12,31 @@ public class NhanVien {
     private int maNV;
     private String tenNV;
     private String dienThoai;
+    private String diaChi;
     private int maCV;
     private float Luong;
 
-    public NhanVien(int maNV, String tenNV, String dienThoai, int maCV, float Luong) {
+    public NhanVien(){
+        
+    }
+
+    public NhanVien(int maNV, String tenNV, String dienThoai, String diaChi, int maCV, float Luong) {
         this.maNV = maNV;
         this.tenNV = tenNV;
         this.dienThoai = dienThoai;
+        this.diaChi = diaChi;
         this.maCV = maCV;
         this.Luong = Luong;
     }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+   
 
     public int getMaNV() {
         return maNV;
@@ -61,6 +76,11 @@ public class NhanVien {
 
     public void setLuong(float Luong) {
         this.Luong = Luong;
+    }
+
+    @Override
+    public String toString() {
+        return "NhanVien{" + "maNV=" + maNV + ", tenNV=" + tenNV + ", dienThoai=" + dienThoai + ", maCV=" + maCV + ", Luong=" + Luong + '}';
     }
     
 }
